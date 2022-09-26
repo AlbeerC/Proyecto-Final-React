@@ -1,9 +1,11 @@
-import Header from './components/header/header'
+import Navbar from "./components/Navbar/Navbar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Navbar />
+      <ItemListContainer greeting = {'Bienvenidos a Gamer Shop'} />
     </div>
   );
 }
