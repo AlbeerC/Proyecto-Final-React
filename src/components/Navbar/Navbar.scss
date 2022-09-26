@@ -1,0 +1,62 @@
+@import '../../scss/variables';
+
+header {
+    background-color: $negro;
+    color: $blanco;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 7rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    img {
+        width: 20rem;
+        height: 10rem;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        align-items: center;
+        list-style: none;
+
+        li {
+            display: inline-block;
+
+            &:hover .submenu {
+                display: flex;
+            }
+
+            button {
+                display: block;
+                color: $blanco;
+                font-size: 2.5rem;
+                cursor: pointer;
+                font-family: $fuenteTextos;
+
+                &:hover {
+                    color: $colorPrincipal;
+                }
+            }
+        }
+
+        .submenu {
+            position: absolute;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #7d7a7a;
+            display: none;
+
+            li {
+                padding: 1rem; 
+            }
+        }
+    }
+}

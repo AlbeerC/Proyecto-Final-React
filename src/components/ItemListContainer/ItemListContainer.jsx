@@ -1,4 +1,4 @@
-import './ItemListContainer.css'
+import './ItemListContainer.scss'
 
 function ItemListContainer ( {greeting} ) {
     return (

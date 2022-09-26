@@ -1,0 +1,11 @@
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,15 @@
+@import '../../scss/variables';
+
+.main {
+    background-image: url(../../assets/fondo.png);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+
+    h1 {
+        font-size: 4rem;
+        text-align: center;
+        padding-top: 5rem;
+        color: $blanco;
+    }
+}

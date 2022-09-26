@@ -1,4 +1,4 @@
-import './CardWidget.css';
+import './CardWidget.scss';
 
 function CardWidget () {
     return (
