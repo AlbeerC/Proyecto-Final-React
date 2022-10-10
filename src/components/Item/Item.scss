@@ -1,0 +1,73 @@
+@import '../../scss/variables';
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(44,52,121);
+    background: linear-gradient(0deg, rgba(44,52,121,1) 0%, rgba(21,90,148,1) 37%, rgba(38,170,206,1) 100%);
+    border-radius: 1rem;
+    margin: 4rem 0;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    img {
+        height: 35rem;
+        width: 30rem;
+        transition: all 500ms ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .item-info {
+        width: 30rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        color: $blanco;
+        font-family: $fuenteTitulos;
+        font-weight: bold;
+        padding: 0 2rem;
+
+        p {
+            font-size: 2.5rem;
+        }
+
+        .detail-button {
+            border-radius: 2rem;
+            padding: 1.5rem 5rem;
+            color: $blanco;
+            background-color: $negro;
+            text-align: center;
+            font-family: $fuenteTextos;
+            font-size: 1.7rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: transparent;
+                border: $bordeCeleste;
+            }
+
+            @media (max-width: 768px) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        .item-info-titles {
+
+            h3 {
+                font-size: 3rem;
+            }
+
+            span {
+                color: #3b3939;
+            }
+        }
+    }
+}

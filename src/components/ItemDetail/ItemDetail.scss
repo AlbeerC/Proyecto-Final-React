@@ -1,0 +1,97 @@
+@import "../../scss/variables";
+
+.product-home {
+    margin: 7rem;
+
+    @media (max-width: 768px) {
+        margin: 2rem;
+    }
+
+    .product-flex {
+        display: flex;
+        justify-content: space-between;
+        max-height: 50rem;
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5rem;
+            max-height: 200rem;
+        }
+        
+        .product-img {
+            width: 70rem;
+            height: auto;
+            -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 20px 16px 7px 4px rgba(0,0,0,0.16); 
+            box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 20px 16px 7px 4px rgba(0,0,0,0.16);
+    
+            @media (max-width: 1200px) {
+                width: 95vw;
+            } 
+        }
+
+        .product-info {
+            background: rgb(44,52,121);
+            background: linear-gradient(0deg, rgba(44,52,121,1) 0%, rgba(21,90,148,1) 37%, rgba(38,170,206,1) 100%);
+            -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 20px 16px 7px 4px rgba(0,0,0,0.16); 
+            box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 20px 16px 7px 4px rgba(0,0,0,0.16);
+            padding: 0 5rem;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            gap: 2rem;
+            color: $blanco;
+
+            @media (max-width:768px) {
+                gap: 1rem;
+            }
+
+            .product-category {
+                padding-top: 5rem;
+                color: #3b3939;
+                font-size: 2rem;
+                font-family: $fuenteTextos;
+                font-weight: bold;
+            }
+
+            .product-title {
+                font-size: 3rem;
+                color: $blanco;
+                font-weight: bold;
+                font-family: $fuenteTitulos;
+            }
+
+            .product-price {
+                font-size: 3rem;
+                font-weight: bold;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+        }
+    }
+
+    .product-desc {
+        color: $blanco;
+        font-family: $fuenteTitulos;
+
+        h3 {
+            font-size: 3rem;
+            padding: 2rem 0;
+            text-align: center;
+
+            @media (max-width: 768px) {
+                font-size: 2.5rem;
+            }
+        }
+
+        p {
+            font-size: 2rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            line-height: 4rem;
+            padding: 1rem 0;
+            font-weight: 600;
+            text-align: justify;
+        }
+    }
+}

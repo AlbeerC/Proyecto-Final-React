@@ -1,0 +1,68 @@
+@import '../../scss/variables';
+
+.counter {
+    padding: 5rem 0;
+    color: $blanco;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    color: $negro;
+    
+    button {
+        background-color: $colorPrincipal;
+        border-radius: 50%;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        border: $bordeNegro;
+        font-weight: bold;
+        font-size: 2rem;
+
+        &:hover {
+            color: $colorPrincipal;
+            border: $bordeCeleste;
+            background-color: $negro;
+        }
+    }
+
+    .counter-buttons {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+
+        p {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+    }
+
+    .btn-add {
+        background-color: $colorPrincipal;
+        border: $bordeNegro;
+        font-size: 2rem;
+        padding: 1.5rem 5rem;
+        font-weight: bold;
+        font-family: $fuenteTextos;
+        border-radius: 2rem;
+        margin-bottom: 5rem;
+        cursor: pointer;
+
+        @media (max-width: 768px) {
+            margin-bottom: 1rem;
+        }
+
+        &:hover {
+            color: $colorPrincipal;
+            border: $bordeCeleste;
+            background-color: $negro;
+        }
+    }
+
+    .counter-stock {
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: #3b3939;
+        font-family: $fuenteTextos;
+    }
+}

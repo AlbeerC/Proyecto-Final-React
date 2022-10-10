@@ -1,22 +1,25 @@
 @import '../../scss/variables';
 
 header {
-    background-color: $negro;
     color: $blanco;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 2rem 7rem;
 
     @media (max-width: 768px) {
-        flex-direction: column;
-        justify-content: center;
         gap: 2rem;
+        justify-content: center;
     }
 
     img {
         width: 20rem;
         height: 10rem;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     .menu {
@@ -26,7 +29,7 @@ header {
         align-items: center;
         list-style: none;
 
-        li {
+        .nav-item {
             display: inline-block;
 
             &:hover .submenu {
@@ -54,7 +57,7 @@ header {
             background-color: #7d7a7a;
             display: none;
 
-            li {
+            .submenu-item {
                 padding: 1rem; 
             }
         }
