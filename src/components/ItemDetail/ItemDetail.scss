@@ -73,7 +73,9 @@
 
     .product-desc {
         color: $blanco;
-        font-family: $fuenteTitulos;
+        background-color: #073e5952;
+        margin: 2rem 0;
+        padding: 2rem;
 
         h3 {
             font-size: 3rem;

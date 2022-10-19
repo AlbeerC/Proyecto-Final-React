@@ -1,8 +1,9 @@
 import "./ItemListContainer.scss";
-import { useState, useEffect } from "react";
-import ItemList from "../ItemList/ItemList";
-import { getProducts, getProductsByCategory } from "../../asyncMock";
-import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react"
+import ItemList from "../ItemList/ItemList"
+import { getProducts, getProductsByCategory } from "../../asyncMock"
+import { useParams } from "react-router-dom"
+import ShopHome from "../ShopHome/ShopHome"
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
@@ -33,7 +34,8 @@ function ItemListContainer() {
 
   return (
     <div className="main">
-      <h1>Bienvenidos a Gamer Shop</h1>
+      <ShopHome />
+      <h1 className="list-title">Nuestros productos</h1>
       <ItemList products={products} />
       <p className="soon">Más juegos próximamente</p>
     </div>

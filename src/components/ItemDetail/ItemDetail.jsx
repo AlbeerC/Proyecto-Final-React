@@ -1,7 +1,19 @@
 import "./ItemDetail.scss"
 import ItemCount from "../ItemCount/ItemCount"
+import { useContext } from "react"
+import { CartContext } from "../../context/CartContext"
 
-function ItemDetail({front, name, category, price, title, description}) {
+function ItemDetail({id, stock, front, name, category, price, title, description}) {
+
+  const { addItem } = useContext(CartContext)
+
+  const handleOnAdd = (quantity) => {
+    const productToAdd = {
+        id, name, price, quantity
+    }
+
+    addItem(productToAdd)
+}
 
   return (
     <section className="product-home">
@@ -12,7 +24,7 @@ function ItemDetail({front, name, category, price, title, description}) {
           <p className="product-category">{category}</p>
           <h2 className="product-title">{name}</h2>
           <p className="product-price">${price}</p>
-          <ItemCount />
+          <ItemCount onAdd={handleOnAdd} stock={stock} />
         </div>
       </div>
 

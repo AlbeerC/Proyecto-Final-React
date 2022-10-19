@@ -1,0 +1,59 @@
+@import "../../scss/variables.scss";
+
+footer {
+    background-color: $negro;
+    color: $blanco;
+    margin-top: 3rem;
+
+    .footer-info {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @media (max-width:768px) {
+            flex-direction: column;
+        }
+
+        img {
+            width: 25rem;
+            height: 13rem;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 4rem 0;
+
+            .contact-item {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 1rem;
+
+                p {
+                    font-family: 'sans-serif';
+                }
+
+                svg {
+                    width: 3rem;
+                    height: 3rem;
+                }
+            }
+        }
+    }
+
+    .copy {
+        text-align: center;
+        background-color: $negro;
+        color: $blanco;
+        padding-bottom: 2rem;
+        font-family: $fuenteTextos;
+
+        a:hover {
+            color: $colorPrincipal;
+            border-bottom: $bordeCeleste;
+        }
+    }
+}

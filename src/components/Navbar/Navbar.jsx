@@ -1,20 +1,19 @@
 import "./Navbar.scss"
 import logo from "../../assets/logo.png"
-import CardWidget from "../CardWidget/CardWidget"
+import CartWidget from "../CartWidget/CartWidget"
 import { Link } from "react-router-dom"
 
 function Navbar() {
   return (
     <header>
         <ul className="menu">
-            <Link to="/" className="nav-item"> <button> Inicio </button></Link>
-            <Link className="nav-item"> <button href=""> Filtros </button>
+            <Link to="/" className="nav-item"> <li> Inicio </li></Link>
+            <Link className="nav-item"> <li> Filtros </li>
                 <ul className="submenu">
-                    <Link to={"/category/Aventura"} className="submenu-item"> <button href=""> Aventura </button> </Link>
-                    <Link to={"/category/Accion"} className="submenu-item"> <button href=""> Acción </button> </Link>
-                    <Link to={"/category/Deportes"} className="submenu-item"> <button href=""> Deportes </button> </Link>
-                    <Link to={"/category/Pelea"} className="submenu-item"> <button href=""> Pelea </button> </Link>
-                    <Link to={"/category/Shooter"} className="submenu-item"> <button href=""> Shooter </button> </Link>
+                    <Link to={"/category/Aventura"} className="submenu-item"> <li> Aventura </li> </Link>
+                    <Link to={"/category/Accion"} className="submenu-item"> <li> Acción </li> </Link>
+                    <Link to={"/category/Deportes"} className="submenu-item"> <li> Deportes </li> </Link>
+                    <Link to={"/category/Shooter"} className="submenu-item"> <li> Shooter </li> </Link>
                 </ul> 
             </Link>
         </ul>
@@ -22,7 +21,7 @@ function Navbar() {
 
         <Link to="/"> <img src={logo} alt="logo" /></Link>
 
-        <CardWidget />
+        <CartWidget />
         
     </header>
   );

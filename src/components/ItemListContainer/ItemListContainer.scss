@@ -1,16 +1,10 @@
 @import '../../scss/variables';
 
 .main {
-    h1 {
+    .list-title {
         font-size: 4rem;
         text-align: center;
-        padding-top: 5rem;
         color: $blanco;
-        background: -webkit-linear-gradient(to right, #ffffff, $colorPrincipal);
-        background: linear-gradient(to right, #ffffff, $colorPrincipal);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent; 
     }
 
     .soon {
