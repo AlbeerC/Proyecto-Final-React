@@ -6,7 +6,7 @@ function ItemCount({stock = 0, initial = 1, onAdd}) {
 
   const increase = () => {
     if(quantity < stock) {
-      setQuantity(prevValor => prevValor + 1)
+      setQuantity(quantity + 1)
     }
   }
 

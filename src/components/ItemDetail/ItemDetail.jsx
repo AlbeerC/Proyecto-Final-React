@@ -2,10 +2,15 @@ import "./ItemDetail.scss"
 import ItemCount from "../ItemCount/ItemCount"
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
+import { NotificationContext } from "../../Notification/NotificationService"
+import { Link, useNavigate } from "react-router-dom"
 
 function ItemDetail({id, stock, front, name, category, price, title, description}) {
 
-  const { addItem } = useContext(CartContext)
+  const { addItem, isInCart } = useContext(CartContext)
+  const { setNotification } = useContext(NotificationContext)
+
+  const navigate = useNavigate()
 
   const handleOnAdd = (quantity) => {
     const productToAdd = {
@@ -13,6 +18,7 @@ function ItemDetail({id, stock, front, name, category, price, title, description
     }
 
     addItem(productToAdd)
+    setNotification("error" `Se agregó correctamente ${quantity} ${name}`)
 }
 
   return (
@@ -24,7 +30,11 @@ function ItemDetail({id, stock, front, name, category, price, title, description
           <p className="product-category">{category}</p>
           <h2 className="product-title">{name}</h2>
           <p className="product-price">${price}</p>
-          <ItemCount onAdd={handleOnAdd} stock={stock} />
+          {
+            !isInCart(id)
+            ? <ItemCount onAdd={handleOnAdd} stock={stock} />
+            : <Link to="/cart" className="checkout">Finalizar compra</Link>
+          }
         </div>
       </div>
 

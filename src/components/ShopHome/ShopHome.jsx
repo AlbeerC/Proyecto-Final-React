@@ -15,7 +15,7 @@ function ShopHome() {
       <div className="info">
 
         <div className="info-item">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-truck-delivery" width="92" height="92" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#26acee" fill="none" strokeLinecap="round" strokeLinejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-truck-delivery" width="92" height="92" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#26acee" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <circle cx="7" cy="17" r="2" />
                 <circle cx="17" cy="17" r="2" />
@@ -29,7 +29,7 @@ function ShopHome() {
         </div>
 
         <div className="info-item">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card" width="92" height="92" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#26acee" fill="none" strokeLinecap="round" strokeLinejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-credit-card" width="92" height="92" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#26acee" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <rect x="3" y="5" width="18" height="14" rx="3" />
                 <line x1="3" y1="10" x2="21" y2="10" />

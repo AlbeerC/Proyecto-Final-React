@@ -9,7 +9,7 @@ function Notification ({ message, severity })  {
       height: 'auto',
       backgroundColor: severity === 'success' ? 'green' : 'red',
       color: 'white',
-      padding: '10px 20px 10px 20px'
+      padding: '10px 20px'
     }
   
     if(message === '') return
