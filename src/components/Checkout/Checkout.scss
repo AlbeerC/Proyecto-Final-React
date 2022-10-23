@@ -1,0 +1,44 @@
+@import "../../scss/variables";
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    p {
+        padding: 1rem 0;
+        color: #757474;
+        font-size: 2rem;
+    }
+
+    .campo {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        padding: 1rem 0;
+
+        label {
+            font-size: 2rem;
+            font-weight: bold;
+            padding-bottom: .8rem;
+            color: $blanco;
+        }
+
+        input {
+            padding: 1rem 2rem;
+        }
+    }
+
+    button {
+        background-color: $negro;
+        font-size: 2rem;
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+        border: $bordeCeleste;
+        border-radius: 1rem;
+        font-weight: bold;
+        color: $blanco;
+        cursor: pointer;
+    }
+}
