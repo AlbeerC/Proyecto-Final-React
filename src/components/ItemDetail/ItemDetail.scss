@@ -99,7 +99,7 @@
     }
 }
 
-.checkout {
+.checkout, .back {
     background-color: $colorPrincipal;
     font-size: 2rem;
     padding: 1rem 2rem;
@@ -107,4 +107,20 @@
     border-radius: 1rem;
     font-weight: bold;
     color: $negro;
+
+    &:hover {
+        background-color: $negro;
+        color: $blanco;
+        border: $bordeCeleste;
+    }
+
+    @media (max-width: 1200px) {
+        margin-bottom: 3rem;
+    }
+}
+
+.product-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }

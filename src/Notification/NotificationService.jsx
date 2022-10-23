@@ -3,13 +3,15 @@ import { useState, createContext } from 'react'
 function Notification ({ message, severity })  {
     const notificationStyles = {
       position: 'absolute',
-      top: 100,
+      top: 110,
       right: 10,
       width: 'auto',
       height: 'auto',
       backgroundColor: severity === 'success' ? 'green' : 'red',
       color: 'white',
-      padding: '10px 20px'
+      padding: '10px 20px',
+      fontWeight: 'bold',
+      fontSize: '20px'
     }
   
     if(message === '') return

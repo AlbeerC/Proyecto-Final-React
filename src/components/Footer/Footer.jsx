@@ -34,7 +34,7 @@ function Footer () {
                 </div>
             </div>
 
-            <p className="copy">Desarrollado por <a href="https://www.linkedin.com/in/alberto-caminos-5b3961243/" target="blank">Alberto Caminos</a></p>
+        <p className="copy">Desarrollado por <a href="https://www.linkedin.com/in/alberto-caminos-5b3961243/" target="blank">Alberto Caminos</a></p>
         </footer>
     )
 }
