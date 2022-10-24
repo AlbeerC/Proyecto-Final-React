@@ -2,20 +2,24 @@
 
 header {
     color: $blanco;
+    position: sticky;
+    top: 0;
+    background-color: #7d7a7a;;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2rem 7rem;
+    padding: 0 7rem;
 
     @media (max-width: 768px) {
         gap: 2rem;
         justify-content: center;
+        padding: 1rem;
     }
 
-    img {
-        width: 20rem;
-        height: 10rem;
+    .navbar-logo {
+        width: 14rem;
+        height: 8rem;
 
         @media (max-width: 768px) {
             display: none;

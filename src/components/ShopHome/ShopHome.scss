@@ -6,6 +6,7 @@
     justify-content: space-around;
     gap: 5rem;
     align-items: center;
+    margin-top: 3rem;
 
     @media (max-width:768px) {
         flex-direction: column;

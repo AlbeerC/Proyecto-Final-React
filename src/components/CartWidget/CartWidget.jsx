@@ -1,24 +1,28 @@
-import './CartWidget.scss'
-import { useContext } from "react"
-import { CartContext } from "../../context/CartContext"
-import { Link } from "react-router-dom"
+import "./CartWidget.scss";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
+import emptyCart from "../../assets/carrito-vacio.png";
+import fullCart from "../../assets/carrito-lleno.png";
 
-function CartWidget () {
+function CartWidget() {
+  const { totalQuantity } = useContext(CartContext);
 
-    const { totalQuantity } = useContext(CartContext)
-
+  if (totalQuantity === 0) {
     return (
       <Link to="/cart" className="cart">
-        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-shopping-cart" width="70" height="60" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-              <circle cx="6" cy="19" r="2" />
-              <circle cx="17" cy="19" r="2" />
-              <path d="M17 17h-11v-14h-2" />
-              <path d="M6 5l14 1l-1 7h-13" />
-        </svg>
+        <img src={emptyCart} alt="carrito vacio" />
         <span>{totalQuantity}</span>
       </Link>
-    )
+    );
+  } else {
+    return (
+      <Link to="/cart" className="cart">
+        <img src={fullCart} alt="carrito lleno" />
+        <span>{totalQuantity}</span>
+      </Link>
+    );
+  }
 }
 
-export default CartWidget
+export default CartWidget;

@@ -4,12 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    margin-top: 3rem;
 
     p {
         padding: 1rem 0;
         color: #757474;
         font-size: 2rem;
+        text-align: center;
     }
 
     .campo {
@@ -18,10 +19,14 @@
         width: 40%;
         padding: 1rem 0;
 
+        @media (max-width:768px) {
+            width: 70%;
+        }
+
         label {
             font-size: 2rem;
             font-weight: bold;
-            padding-bottom: .8rem;
+            padding-bottom: 1rem;
             color: $blanco;
         }
 

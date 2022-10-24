@@ -4,6 +4,7 @@ import CartWidget from "../CartWidget/CartWidget"
 import { Link } from "react-router-dom"
 
 function Navbar() {
+
   return (
     <header>
         <ul className="menu">
@@ -19,7 +20,7 @@ function Navbar() {
         </ul>
 
 
-        <Link to="/"> <img src={logo} alt="logo" /></Link>
+        <Link to="/"> <img src={logo} alt="logo" className="navbar-logo" /></Link>
 
         <CartWidget />
         

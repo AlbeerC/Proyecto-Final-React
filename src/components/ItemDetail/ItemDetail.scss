@@ -46,7 +46,9 @@
             min-width: 40rem;
 
             @media (max-width:768px) {
-                gap: 1rem;
+                gap: .5rem;
+                padding: 0 2rem;
+                min-width: auto;
             }
 
             .product-category {
