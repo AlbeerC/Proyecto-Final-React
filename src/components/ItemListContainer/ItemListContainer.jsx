@@ -1,7 +1,6 @@
 import "./ItemListContainer.scss";
 import { useState, useEffect } from "react"
 import ItemList from "../ItemList/ItemList"
-import { getProducts, getProductsByCategory } from "../../asyncMock"
 import { useParams } from "react-router-dom"
 import ShopHome from "../ShopHome/ShopHome"
 import { getDocs, collection, query, where } from "firebase/firestore"
