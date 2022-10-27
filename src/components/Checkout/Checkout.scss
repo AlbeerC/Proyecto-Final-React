@@ -1,49 +1,55 @@
 @import "../../scss/variables";
 
-.form {
+.form-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 3rem;
-
-    p {
-        padding: 1rem 0;
-        color: #757474;
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .campo {
+    .form {
         display: flex;
         flex-direction: column;
-        width: 40%;
-        padding: 1rem 0;
-
-        @media (max-width:768px) {
-            width: 70%;
-        }
-
-        label {
+        align-items: center;
+        margin-top: 3rem;
+    
+        p {
+            padding: 1rem 0;
+            color: #757474;
             font-size: 2rem;
-            font-weight: bold;
-            padding-bottom: 1rem;
-            color: $blanco;
+            text-align: center;
         }
-
-        input {
-            padding: 1rem 2rem;
+    
+        .campo {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 0;
+    
+            @media (max-width:768px) {
+                width: 70%;
+            }
+    
+            label {
+                font-size: 2rem;
+                font-weight: bold;
+                padding-bottom: 1rem;
+                color: $blanco;
+            }
+    
+            input {
+                padding: 1rem 2rem;
+            }
         }
     }
-
-    button {
-        background-color: $negro;
-        font-size: 2rem;
-        margin-top: 1rem;
-        padding: 1rem 2rem;
-        border: $bordeCeleste;
-        border-radius: 1rem;
-        font-weight: bold;
-        color: $blanco;
-        cursor: pointer;
+    .btn-checkout {
+            background-color: $negro;
+            font-size: 2rem;
+            margin-top: 1rem;
+            padding: 1rem 2rem;
+            border: $bordeCeleste;
+            border-radius: 1rem;
+            font-weight: bold;
+            color: $blanco;
+            cursor: pointer;
+            max-width: 30rem;
     }
 }

@@ -30,3 +30,9 @@ h1, h2, h3 {
 p {
   font-family: $fuenteTextos;
 }
+.loading {
+  text-align: center;
+  padding-top: 5rem;
+  font-size: 5rem;
+  color: $blanco;
+}
