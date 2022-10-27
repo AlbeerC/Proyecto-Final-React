@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCcb_mtSYXoNz8LRQnujajJyVSloJ28ux4",
-  authDomain: "backend-gamershop.firebaseapp.com",
-  projectId: "backend-gamershop",
-  storageBucket: "backend-gamershop.appspot.com",
-  messagingSenderId: "371567593466",
-  appId: "1:371567593466:web:766679f11f5ba5445ac643"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 
