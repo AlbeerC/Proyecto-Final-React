@@ -2,7 +2,7 @@ import "./ItemDetail.scss"
 import ItemCount from "../ItemCount/ItemCount"
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
-import { NotificationContext } from "../../notification/NotificationService"
+import { NotificationContext } from "../../Notification/NotificationService"
 import { Link } from "react-router-dom"
 
 function ItemDetail({id, stock, front, name, category, price, title, description}) {

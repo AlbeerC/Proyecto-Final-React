@@ -3,7 +3,7 @@ import { useContext, useState } from "react"
 import { CartContext } from "../../context/CartContext"
 import { addDoc, collection, getDocs, query, where, documentId, writeBatch } from "firebase/firestore"
 import { database } from "../../services/firebase/index"
-import { NotificationContext } from "../../notification/NotificationService"
+import { NotificationContext } from "../../Notification/NotificationService"
 import { useNavigate } from "react-router-dom"
 
 function Checkout () {
