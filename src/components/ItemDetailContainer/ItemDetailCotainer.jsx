@@ -4,13 +4,12 @@ import { useParams, useNavigate } from "react-router-dom";
 import { getDoc, doc } from "firebase/firestore";
 import { database } from "../../services/firebase";
 
-function ItemDetailContainer({ setCart }) {
+function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const { productId } = useParams();
 
-  const navigate = useNavigate();
 
   useEffect(() => {
     const docRef = doc(database, "products", productId);
@@ -25,6 +24,8 @@ function ItemDetailContainer({ setCart }) {
         setLoading(false);
       });
   }, [productId]);
+
+
 
   if (loading) {
     return <h1 className="loading">Cargando...</h1>;

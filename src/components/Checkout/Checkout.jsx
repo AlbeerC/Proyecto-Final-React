@@ -3,7 +3,7 @@ import { useContext, useState } from "react"
 import { CartContext } from "../../context/CartContext"
 import { addDoc, collection, getDocs, query, where, documentId, writeBatch } from "firebase/firestore"
 import { database } from "../../services/firebase/index"
-import { NotificationContext } from "../../Notification/NotificationService"
+import { NotificationContext } from "../../notification/NotificationService"
 import { useNavigate } from "react-router-dom"
 
 function Checkout () {
@@ -113,8 +113,9 @@ function Checkout () {
                     <label>Dirección</label>
                     <input type="text" required value={adress} onChange={(e) => setAdress(e.target.value)} />
                 </div>
+                <button className="btn-checkout" onClick={createOrder}>Generar orden</button>
             </form>
-            <button className="btn-checkout" onClick={createOrder}>Generar orden</button>
+
 
         </div>
     )

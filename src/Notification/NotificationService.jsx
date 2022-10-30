@@ -1,23 +1,21 @@
 import { useState, createContext } from 'react'
 
 function Notification ({ message, severity })  {
-    const notificationStyles = {
+     const notificationStyles = {
+      padding: '20px',
       position: 'absolute',
-      top: 110,
+      top: 120,
       right: 10,
-      width: 'auto',
-      height: 'auto',
       backgroundColor: severity === 'success' ? 'green' : 'red',
       color: 'white',
-      padding: '10px 20px',
       fontWeight: 'bold',
       fontSize: '20px'
-    }
+    } 
   
     if(message === '') return
 
     return (
-      <div style={notificationStyles} className={severity === 'success' ? 'greenClass' : 'redClass'}>
+      <div style={notificationStyles}>
         {message}
       </div>
     )

@@ -1,42 +1,26 @@
 import "./ItemListContainer.scss";
-import { useState, useEffect } from "react"
 import ItemList from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
 import ShopHome from "../ShopHome/ShopHome"
-import { getDocs, collection, query, where } from "firebase/firestore"
-import { database } from "../../services/firebase"
+import { getProducts } from "../../services/firebase/firestore/products"
+import { useAsync } from "../../hooks/useAsync";
 
 function ItemListContainer() {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   const { categoryId } = useParams();
 
-  useEffect(() => {
-    setLoading(true)
-   
-    const collectionRef = categoryId 
-        ? query(collection(database, "products"), where("category", "==", categoryId))
-        : collection(database, "products")
+  const getProductsCategory = () => getProducts(categoryId)
 
-    getDocs(collectionRef).then(response => {
-        const productsAdapted = response.docs.map(doc => {
-            const data = doc.data()
+  const { data: products, error, loading } = useAsync(getProductsCategory, [categoryId])
 
-            return { id: doc.id, ...data }
-        })
 
-        setProducts(productsAdapted)
-
-    }).catch(error => {
-        console.log(error)
-    }).finally(() => {
-        setLoading(false)
-    })  
-}, [categoryId])
 
   if (loading) {
     return <h1 className="loading">Cargando...</h1>;
+  }
+
+  if (error) {
+    return <h1 className="loading">Error</h1>;
   }
 
   return (

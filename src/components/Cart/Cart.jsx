@@ -12,7 +12,6 @@ function Cart() {
         <h1 className="empty-cart-title">Tu carrito está vacio</h1>
         <Link to="/" className="empty-cart-btn">Ir a la tienda</Link>
       </div>
-
     )
   } else {
     return (
@@ -53,8 +52,6 @@ function Cart() {
       </div>
     );
   }
-
-
 }
 
 export default Cart;
