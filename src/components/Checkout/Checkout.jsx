@@ -84,15 +84,11 @@ function Checkout () {
         }
     }
     
-
-
     if (loading) {
         return (
             <h1 className="loading">Se está generando su orden...</h1>
         )
     }
-
-
     
     return (
         <div className="form-container">
