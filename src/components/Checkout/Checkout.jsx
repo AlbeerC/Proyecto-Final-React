@@ -83,6 +83,7 @@ function Checkout () {
             setLoading(false)
         }
     }
+    
 
 
     if (loading) {
@@ -113,10 +114,8 @@ function Checkout () {
                     <label>Dirección</label>
                     <input type="text" required value={adress} onChange={(e) => setAdress(e.target.value)} />
                 </div>
-                <button className="btn-checkout" onClick={createOrder}>Generar orden</button>
             </form>
-
-
+            <button className="btn-checkout" onClick={(name && email && phone && adress !== "") ? createOrder : setNotification("error", "*Todos los campos son obligatorios")}>Generar orden</button>
         </div>
     )
 }
